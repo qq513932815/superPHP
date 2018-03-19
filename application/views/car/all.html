@@ -1,0 +1,11 @@
+<form action="<?=ROOT_URL?>/Car/add" method="post">
+    <input type="text" name="carname" placeholder="汽车名称">
+    <input type="text" name="price" placeholder="汽车价格">
+    <input type="submit" value="提交">
+</form>
+
+<ul>
+    <?php foreach($cars as $car){?>
+        <li><?= $car['name'];?> <a href="<?=ROOT_URL?>/Car/delete/<?=$car['id']?>">删除</a></li>
+    <?php }?>
+</ul>
